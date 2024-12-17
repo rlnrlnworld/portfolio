@@ -57,12 +57,13 @@ const ProjectsDescription = styled.div`
   width: 50%;
 `;
 
-const MoreButton = styled.button`
+const MoreButton = styled.a`
   font-family: 'Abril Fatface', serif;
   color: #333;
   background-color: white;
   border: none;
   padding: 10px 20px;
+  text-decoration: none;
 
   &:hover {
     text-decoration: underline;
@@ -112,7 +113,7 @@ const Projects = () => {
         <ProjectsDescription>
           As a seasoned creator of contemporary, user-friendly web designs and digital solutions, I aim to assist you in constructing the brand of your fantasies.
         </ProjectsDescription>
-        <MoreButton>More →</MoreButton>
+        <MoreButton href='https://github.com/rlnrlnworld' target="_blank" rel="noopener noreferrer">More →</MoreButton>
       </ProjectsList>
       <ProjectCardList>
         {projects.map((project, index) => (
