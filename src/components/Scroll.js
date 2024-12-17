@@ -3,7 +3,7 @@ import styled, { keyframes } from 'styled-components';
 
 const scroll = keyframes`
   from {
-    transform: translateX(100%); /* 화면 오른쪽에서 시작 */
+    transform: translateX(0); /* 화면 오른쪽에서 시작 */
   }
   to {
     transform: translateX(-100%); /* 화면 왼쪽으로 끝까지 이동 */
@@ -30,7 +30,7 @@ const ScrollingText = styled.div`
   font-family: 'Abril Fatface', serif;
   color: #333;
 
-  animation: ${scroll} 100s linear infinite; /* 애니메이션 적용 */
+  animation: ${scroll} 50s linear infinite; /* 애니메이션 적용 */
 `;
 const Scroll = () => {
   return (

@@ -4,6 +4,7 @@ import HeroSection from './components/HeroSection';
 import Projects from './components/Projects';
 import About from './components/About';
 import Scroll from './components/Scroll';
+import Contact from './components/Contact';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
      <Projects />
      <About />
      <Scroll />
+     <Contact />
     </div>
   );
 }
