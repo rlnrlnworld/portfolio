@@ -36,7 +36,7 @@ const ContactButton = styled.a`
 `
 const Contact = () => {
   return (
-    <ContactContainer>
+    <ContactContainer id='contact'>
       <ContactTitle>
         Let's talk!
       </ContactTitle>
