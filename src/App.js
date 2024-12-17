@@ -3,6 +3,7 @@ import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import Projects from './components/Projects';
 import About from './components/About';
+import Scroll from './components/Scroll';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
      <HeroSection />
      <Projects />
      <About />
+     <Scroll />
     </div>
   );
 }

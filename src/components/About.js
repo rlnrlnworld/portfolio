@@ -21,7 +21,7 @@ const AboutContainer = styled.section`
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 100px 0px;
+  margin: 100px 0px 0px;
   background-color: black;
   padding: 30px 80px;
 
