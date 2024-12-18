@@ -136,6 +136,7 @@ const TechStackContainer = styled.div`
     color: white;
     padding: 5px 10px;
     border-radius: 32px;
+    text-decoration: none;
     transition: background-color 0.3s ease, transform 0.3s ease;
 
     &:hover {
@@ -181,7 +182,7 @@ const ProjectCard = ({ title, description, image, day, details, techStack, role,
               {techStack.map((tech, index) => (
                 <img key={index} src={tech} alt="기술 스택" />
               ))}
-              <a href={src}>Github 보기</a>
+              <a href={src} target="_blank" rel="noopener noreferrer">Github 보기</a>
             </TechStackContainer>
           </ModalContentWrapper>
         </Modal>
