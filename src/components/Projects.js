@@ -18,18 +18,8 @@ import axiosImage from '../assets/axios.svg'
 import styledImage from '../assets/styledcomponents.svg'
 import fireImage from '../assets/firebase.svg'
 import reduxImage from '../assets/redux.svg'
+import { fadeIn } from '../styles/animation';
 
-// 페이드 인 애니메이션 정의
-const fadeIn = keyframes`
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-`;
 
 // 프로젝트 섹션 스타일링
 const ProjectContainer = styled.section`
@@ -99,10 +89,10 @@ const Projects = () => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.disconnect(); // 한 번만 실행되도록 옵저버 해제
+          observer.disconnect();
         }
       },
-      { threshold: 0.3 } // 화면에 30% 이상 보일 때 작동
+      { threshold: 0.3 }
     );
 
     if (ref.current) {
@@ -214,7 +204,7 @@ const Projects = () => {
       </ProjectsList>
       <ProjectCardList>
         {projects.map((project, index) => (
-          <ProjectCard key={index} {...project} />
+          <ProjectCard key={index} {...project} isVisible={isVisible} delay={index * 0.2} />
         ))}
       </ProjectCardList>
     </ProjectContainer>

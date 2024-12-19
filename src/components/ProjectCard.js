@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import Modal from './Modal';
+import { fadeIn } from '../styles/animation';
 
 const ProjectTitle = styled.p`
   font-family: 'Abril Fatface', serif;
@@ -19,6 +20,9 @@ const ProjectImgContainer = styled.div`
   }
 
   &:hover div {
+    opacity: 1;
+  }
+  &:hover p {
     opacity: 1;
   }
 `;
@@ -51,6 +55,7 @@ const ViewButton = styled.p`
   padding: 10px 20px;
   opacity: 0;
   transition: opacity 0.3s ease;
+  z-index: 1;
 
   &:hover {
     text-decoration: underline;
@@ -64,6 +69,10 @@ const ProjectCardContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  opacity: 0;
+  transform: translateY(50px); 
+  animation: ${({ isVisible }) => isVisible && css`${fadeIn} 0.8s ease-out forwards`};
+  animation-delay: ${({ delay }) => `${delay}s`};
 `;
 
 const ModalImage = styled.img`
@@ -147,12 +156,12 @@ const TechStackContainer = styled.div`
   }
 `;
 
-const ProjectCard = ({ title, description, image, day, details, techStack, role, result, src, hoverColor }) => {
+const ProjectCard = ({ isVisible, delay, title, description, image, day, details, techStack, role, result, src, hoverColor }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <>
-      <ProjectCardContainer>
+      <ProjectCardContainer isVisible={isVisible} delay={delay}>
         <ProjectImgContainer>
           <ProjectImg src={image} alt={title} />
           <ProjectOverlay onClick={() => setIsModalOpen(true)} />
