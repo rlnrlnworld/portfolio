@@ -13,8 +13,8 @@ const ContactTitle = styled.h1`
   text-align: center;
   @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
   font-family: 'Abril Fatface', serif;
-  font-size: 8rem;
-  font-weight: 400;
+  font-size: 7rem;
+  font-weight: lighter;
   margin-bottom: 30px;
 `
 const ContactButton = styled.a`

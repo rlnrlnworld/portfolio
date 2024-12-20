@@ -26,7 +26,7 @@ const ScrollingSection = styled.section`
 const ScrollingText = styled.div`
   display: inline-block;
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 400;
   font-family: 'Abril Fatface', serif;
   color: #333;
 

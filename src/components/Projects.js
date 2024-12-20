@@ -4,6 +4,9 @@ import ProjectCard from './ProjectCard';
 import spacemeImage from '../assets/spaceme.png';
 import kiwoonImage from '../assets/kiwoon.png';
 import disneyImage from '../assets/disney.png';
+import movieImage from '../assets/movie.png'
+import ipadImage from '../assets/ipad.png'
+import starbucksImage from '../assets/starbucks.png'
 import instagramImage from '../assets/instagram.png';
 import dartImage from '../assets/dart.svg'
 import flutterImage from '../assets/flutter.svg'
@@ -18,6 +21,8 @@ import axiosImage from '../assets/axios.svg'
 import styledImage from '../assets/styledcomponents.svg'
 import fireImage from '../assets/firebase.svg'
 import reduxImage from '../assets/redux.svg'
+import gsapImage from '../assets/greensock.svg'
+import aiImage from '../assets/aichat.png'
 import { fadeIn } from '../styles/animation';
 
 
@@ -60,19 +65,23 @@ const ProjectsDescription = styled.div`
   width: 50%;
 `;
 
-const MoreButton = styled.a`
+const MoreButton = styled.button`
   font-family: 'Abril Fatface', serif;
-  color: #333;
-  background-color: white;
+  font-size: 1rem;
+  color: white;
+  background-color: black;
   border: none;
   padding: 10px 20px;
-  text-decoration: none;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s;
+  border-radius: 32px;
 
   &:hover {
-    text-decoration: underline;
-    cursor: pointer;
+    background-color: #444;
   }
 `;
+
 
 const ProjectCardList = styled.div`
   display: flex;
@@ -82,6 +91,7 @@ const ProjectCardList = styled.div`
 
 const Projects = () => {
   const [isVisible, setIsVisible] = useState(true);
+  const [visibleProjects, setVisibleProjects] = useState(4);
   const ref = useRef();
 
   useEffect(() => {
@@ -190,8 +200,97 @@ const Projects = () => {
         gitImage
       ],
       hoverColor: "#e76d24"
-    }
+    },
+    { title: "Germini AI Chat", 
+      description: "Germini 기반 AI 채팅 서비스", 
+      image: aiImage,
+      src: "https://github.com/rlnrlnworld/chatgpt-app",
+      day: "2024.10",
+      role: "iOS/Andriod 앱 개발 및 학습 프로젝트",
+      result: "Flutter와 Germini API를 활용해 실시간 AI 응답 기능을 구현하며 상태 관리와 API 통합 학습",
+      details: [
+        "Flutter를 활용해 AI 챗 서비스 UI 및 기능 구현",
+        "Germini API를 연동해 사용자의 입력에 실시간 응답 생성",
+        "자연어 입력 처리 및 실시간 대화 반영을 통한 인터랙티브한 사용자 경험 제공"
+      ],
+      techStack: [
+        dartImage,
+        flutterImage,
+        gitImage
+      ],
+      hoverColor: "#8122f3"
+    },
+    { title: "Starbucks", 
+      description: "VanillaJS로 스타벅스 웹 페이지 클론", 
+      image: starbucksImage,
+      src: "https://github.com/rlnrlnworld/starbucks",
+      day: "2024.03",
+      role: "프론트엔드 개발 및 학습 프로젝트",
+      result: "반응형 웹 페이지를 Javascript를 통해 구현",
+      details: [
+        "반응형 웹 페이지 구현",
+        "GSAP 애니메이션 구현",
+        "Youtube IFrame Player API 활용",
+        "Vercel을 이용해 프로젝트 배포"
+      ],
+      techStack: [
+        jsImage,
+        htmlImage,
+        cssImage,
+        gsapImage,
+        gitImage
+      ],
+      hoverColor: "#bde52a"
+    },
+    { title: "Apple iPad", 
+      description: "vanillaJS로 아이패드 웹 페이지 클론", 
+      image: ipadImage,
+      day: "2024.03 - 2024.04",
+      role: "프론트엔드 개발 및 학습 프로젝트",
+      src: "https://github.com/rlnrlnworld/ipad?tab=readme-ov-file",
+      result: "반응형 웹 페이지를 Javascript로 구현",
+      details: [
+        "반응형 웹 페이지 구현",
+        "IntersectionObserver를 활용한 스크롤 애니메이션 구현",
+        "CSS Sprite를 활용한 이미지 최적화 및 애니메이션 구현",
+        "오픈 그래프 및 메타 태그 설정",
+        "Vercel을 이용해 프로젝트 배포"
+      ],
+      techStack: [
+        jsImage,
+        htmlImage,
+        cssImage,
+        gitImage
+      ],
+      hoverColor: "#0a7afd"
+    },
+    { title: "Movie Search", 
+      description: "OMDB API를 이용한 영화 검색 사이트", 
+      image: movieImage,
+      src: "https://github.com/rlnrlnworld/movie-app",
+      day: "2024.08 - 2024.09",
+      role: "API를 통한 비동기 통신 및 컴포넌트 기반 웹 페이지 구현",
+      result: "API 연동을 통한 데이터 처리 및 상태 관리",
+      details: [
+        "API 연동 및 비동기 데이터 처리",
+        "컴포넌트 기반 개발 방식 활용",
+        "상태 관리 및 렌더링",
+        "Skeleton UI 구현",
+        "Vercel을 이용한 배포"
+      ],
+      techStack: [
+        jsImage,
+        htmlImage,
+        cssImage,
+        gitImage
+      ],
+      hoverColor: "#e76d24"
+    },
   ];
+
+  const handleLoadMore = () => {
+    setVisibleProjects((prev) => prev + 4); // 4개씩 더 보여주기
+  };
 
   return (
     <ProjectContainer id="projects" ref={ref} isVisible={isVisible}>
@@ -200,13 +299,15 @@ const Projects = () => {
         <ProjectsDescription>
           As a seasoned creator of contemporary, user-friendly web designs and digital solutions, I aim to assist you in constructing the brand of your fantasies.
         </ProjectsDescription>
-        <MoreButton href='https://github.com/rlnrlnworld' target="_blank" rel="noopener noreferrer">More →</MoreButton>
       </ProjectsList>
       <ProjectCardList>
-        {projects.map((project, index) => (
-          <ProjectCard key={index} {...project} isVisible={isVisible} delay={index * 0.2} />
+        {projects.slice(0, visibleProjects).map((project, index) => (
+          <ProjectCard key={index} {...project} isVisible={isVisible} />
         ))}
       </ProjectCardList>
+      {visibleProjects < projects.length && (
+        <MoreButton onClick={handleLoadMore}>More +</MoreButton>
+      )}
     </ProjectContainer>
   );
 };
