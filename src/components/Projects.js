@@ -201,25 +201,6 @@ const Projects = () => {
       ],
       hoverColor: "#C6E957"
     },
-    { title: "Germini AI Chat", 
-      description: "Germini 기반 AI 채팅 서비스", 
-      image: aiImage,
-      src: "https://github.com/rlnrlnworld/chatgpt-app",
-      day: "2024.10",
-      role: "iOS/Andriod 앱 개발 및 학습 프로젝트",
-      result: "Flutter와 Germini API를 활용해 실시간 AI 응답 기능을 구현하며 상태 관리와 API 통합 학습",
-      details: [
-        "Flutter를 활용해 AI 챗 서비스 UI 및 기능 구현",
-        "Germini API를 연동해 사용자의 입력에 실시간 응답 생성",
-        "자연어 입력 처리 및 실시간 대화 반영을 통한 인터랙티브한 사용자 경험 제공"
-      ],
-      techStack: [
-        dartImage,
-        flutterImage,
-        gitImage
-      ],
-      hoverColor: "#42887E"
-    },
     { title: "Starbucks", 
       description: "VanillaJS로 스타벅스 웹 페이지 클론", 
       image: starbucksImage,
@@ -238,6 +219,25 @@ const Projects = () => {
         htmlImage,
         cssImage,
         gsapImage,
+        gitImage
+      ],
+      hoverColor: "#42887E"
+    },
+    { title: "Germini AI Chat", 
+      description: "Germini 기반 AI 채팅 서비스", 
+      image: aiImage,
+      src: "https://github.com/rlnrlnworld/chatgpt-app",
+      day: "2024.10",
+      role: "iOS/Andriod 앱 개발 및 학습 프로젝트",
+      result: "Flutter와 Germini API를 활용해 실시간 AI 응답 기능을 구현하며 상태 관리와 API 통합 학습",
+      details: [
+        "Flutter를 활용해 AI 챗 서비스 UI 및 기능 구현",
+        "Germini API를 연동해 사용자의 입력에 실시간 응답 생성",
+        "자연어 입력 처리 및 실시간 대화 반영을 통한 인터랙티브한 사용자 경험 제공"
+      ],
+      techStack: [
+        dartImage,
+        flutterImage,
         gitImage
       ],
       hoverColor: "#EC43A6"
