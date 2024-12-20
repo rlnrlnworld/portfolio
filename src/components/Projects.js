@@ -133,7 +133,7 @@ const Projects = () => {
         xcodeImage,
         gitImage
       ],
-      hoverColor: "#8122f3"
+      hoverColor: "#42887E"
     },
     { title: "Kiwoon", 
       description: "도마뱀 케이지 관리 서비스", 
@@ -155,7 +155,7 @@ const Projects = () => {
         cssImage,
         gitImage
       ],
-      hoverColor: "#bde52a"
+      hoverColor: "#EC43A6"
     },
     { title: "Disney Plus", 
       description: "React를 활용한 디즈니 플러스 클론", 
@@ -179,7 +179,7 @@ const Projects = () => {
         styledImage,
         gitImage
       ],
-      hoverColor: "#0a7afd"
+      hoverColor: "#000"
     },
     { title: "Instagram Mini", 
       description: "Flutter를 활용하여 인스타그램의 일부 기능을 구현", 
@@ -199,7 +199,7 @@ const Projects = () => {
         fireImage,
         gitImage
       ],
-      hoverColor: "#e76d24"
+      hoverColor: "#C6E957"
     },
     { title: "Germini AI Chat", 
       description: "Germini 기반 AI 채팅 서비스", 
@@ -218,7 +218,7 @@ const Projects = () => {
         flutterImage,
         gitImage
       ],
-      hoverColor: "#8122f3"
+      hoverColor: "#42887E"
     },
     { title: "Starbucks", 
       description: "VanillaJS로 스타벅스 웹 페이지 클론", 
@@ -240,7 +240,7 @@ const Projects = () => {
         gsapImage,
         gitImage
       ],
-      hoverColor: "#bde52a"
+      hoverColor: "#EC43A6"
     },
     { title: "Apple iPad", 
       description: "vanillaJS로 아이패드 웹 페이지 클론", 
@@ -262,7 +262,7 @@ const Projects = () => {
         cssImage,
         gitImage
       ],
-      hoverColor: "#0a7afd"
+      hoverColor: "#000"
     },
     { title: "Movie Search", 
       description: "OMDB API를 이용한 영화 검색 사이트", 
@@ -284,7 +284,7 @@ const Projects = () => {
         cssImage,
         gitImage
       ],
-      hoverColor: "#e76d24"
+      hoverColor: "#C6E957"
     },
   ];
 
