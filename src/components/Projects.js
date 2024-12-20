@@ -24,17 +24,15 @@ import { fadeIn } from '../styles/animation';
 // 프로젝트 섹션 스타일링
 const ProjectContainer = styled.section`
   display: flex;
-  margin-top: 100px;
+  margin-top: 0;
+  padding: 550px 0 100px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-
-  /* 초기 상태는 opacity 0, translateY로 위에서 아래로 */
   opacity: 0;
   transform: translateY(50px);
 
-  /* isVisible 상태에 따라 애니메이션 적용 */
   ${(props) =>
     props.isVisible &&
     css`
@@ -43,7 +41,9 @@ const ProjectContainer = styled.section`
 `;
 
 const ProjectTitle = styled.h2`
+  @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
   font-family: 'Abril Fatface', serif;
+  background-color: white;
   font-weight: 400;
   font-size: 1.8rem;
 `;
@@ -81,7 +81,7 @@ const ProjectCardList = styled.div`
 `;
 
 const Projects = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
   const ref = useRef();
 
   useEffect(() => {

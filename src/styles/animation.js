@@ -1,6 +1,5 @@
 import { keyframes } from 'styled-components';
 
-// fadeIn 애니메이션 정의
 export const fadeIn = keyframes`
   from {
     opacity: 0;
@@ -9,5 +8,23 @@ export const fadeIn = keyframes`
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+`;
+
+export const waterFill = keyframes`
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+`;
+
+export const textColorChange = keyframes`
+  0% {
+    color: black;
+  }
+  100% {
+    color: white;
   }
 `;
