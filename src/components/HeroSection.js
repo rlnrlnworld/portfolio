@@ -96,7 +96,6 @@ const HeroSection = () => {
           pin: true,
           pinSpacing: false,
           scrub: true,
-          markers: true,
           onLeave: () => {
             gsap.to(wrapperRef.current, { opacity: 0, visibility: "hidden", duration: 0.5 });
           },
