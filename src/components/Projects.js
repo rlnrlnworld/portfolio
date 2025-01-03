@@ -30,7 +30,7 @@ import { fadeIn } from '../styles/animation';
 const ProjectContainer = styled.section`
   display: flex;
   margin-top: 0;
-  padding: 550px 0 100px;
+  padding: 650px 0 100px;
   flex-direction: column;
   justify-content: center;
   align-items: center;

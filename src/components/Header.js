@@ -13,12 +13,13 @@ const HeaderContainer = styled.header`
   position: absolute;
   top: 0;
   z-index: 10;
-  margin-bottom: 300px;
+  margin-bottom: 350px;
 `;
 
 const Nav = styled.nav`
   justify-content: center;
   align-items: center;
+  margin-bottom: 100px;
 `;
 
 const Logo = styled.h1`

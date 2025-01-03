@@ -42,6 +42,7 @@ const HeroTitle = styled.h1`
   mix-blend-mode: difference;
   letter-spacing: -0.02em;
   margin: 0;
+  padding-top: 100px;
 `;
 
 const HeroList = styled.div`
