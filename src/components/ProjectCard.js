@@ -138,12 +138,18 @@ const TechStackContainer = styled.div`
     }
   }
 
-  a {
+  p {
     position: absolute;
     right: 10px;
+    font-weight: lighter;
+  }
+
+  a {
+    margin-left: 10px;
     background-color: black;
     color: white;
     padding: 5px 10px;
+    font-weight: 400;
     border-radius: 32px;
     text-decoration: none;
     transition: background-color 0.3s ease, transform 0.3s ease;
@@ -191,7 +197,10 @@ const ProjectCard = ({ isVisible, delay, title, description, image, day, details
               {techStack.map((tech, index) => (
                 <img key={index} src={tech} alt="기술 스택" />
               ))}
-              <a href={src} target="_blank" rel="noopener noreferrer">Github 보기</a>
+              <p>
+                더욱 자세히 보고싶다면? 
+                <a href={src} target="_blank" rel="noopener noreferrer">Github 보기</a>
+              </p>
             </TechStackContainer>
           </ModalContentWrapper>
         </Modal>
