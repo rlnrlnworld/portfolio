@@ -6,6 +6,7 @@ import notionIcon from '../assets/notion.png'
 import resumeIcon from '../assets/resume.png'
 import quoteLeft from '../assets/quote_left.png'
 import quoteRight from '../assets/quote_right.png'
+import linkIcon from '../assets/link.png'
 
 // 페이드 인 애니메이션 정의
 const fadeIn = keyframes`
@@ -104,6 +105,18 @@ const DetailItem = styled.div`
     margin: 0;
     font-size: 1rem;
     color: white;
+  }
+
+  img {
+    height: 12px;
+    width: 12px;
+    transform: translate(-7px, 0px);
+    filter: brightness(0.5);
+    transition: filter 0.2s ease;
+
+    &:hover {
+      filter: brightness(1);
+    }
   }
 `;
 
@@ -406,10 +419,16 @@ const About = () => {
               <DetailItem>
                 <span>2019.03 - 2024.02</span>
                 <p>강원대학교 정보통신공학전공</p>
+                <a href="https://wwwk.kangwon.ac.kr/" target="_blank" rel="noopener noreferrer">
+                  <img src={linkIcon}/>
+                </a>
               </DetailItem>
               <DetailItem>
                 <span>2024.06 - 2024.12</span>
-                <p>LG DX School</p>
+                <p>LG DX School 1기</p>
+                <a href="https://dxschool.co.kr/" target="_blank" rel="noopener noreferrer">
+                  <img src={linkIcon}/>
+                </a>
               </DetailItem>
             </AboutDetails>
           </AboutSection>
