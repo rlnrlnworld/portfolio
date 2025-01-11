@@ -4,6 +4,8 @@ import meImage from '../assets/me.png';
 import githubIcon from '../assets/github.png'
 import notionIcon from '../assets/notion.png'
 import resumeIcon from '../assets/resume.png'
+import quoteLeft from '../assets/quote_left.png'
+import quoteRight from '../assets/quote_right.png'
 
 // 페이드 인 애니메이션 정의
 const fadeIn = keyframes`
@@ -115,6 +117,7 @@ const AboutMe = styled.div`
 
 const ImageContainer = styled.div`
   position: relative;
+  transform: translateY(-10px);
   width: 300px;
   height: 350px;
   overflow: hidden;
@@ -137,6 +140,27 @@ const ImageContainer = styled.div`
     height: 100%;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.8) 100%);
     pointer-events: none; 
+  }
+`;
+
+const Motto = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-55%, 135px);
+  display: flex;
+  z-index: 1; 
+
+  img {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+  }
+  p {
+    color: white;
+    font-size: 1.1rem;
+    width: 300px;
+    margin: 20px 0 0;
   }
 `;
 
@@ -369,6 +393,11 @@ const About = () => {
           <ImageContainer>
             <img src={meImage} alt="Profile" />
           </ImageContainer>
+          <Motto>
+            <img src={quoteLeft}/>
+            <p>팀과 사용자 모두를 만족시킬 수 있는<br />개발자로 성장하겠습니다.</p>
+            <img src={quoteRight}/>
+          </Motto>
         </AboutSection>
         <AboutSubMe>
           <AboutSection isVisible={isVisible} delay={0.7}>
