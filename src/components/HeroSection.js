@@ -56,6 +56,12 @@ const HeroList = styled.div`
     font-size: 1rem;
     font-weight: 400;
     mix-blend-mode: difference;
+    line-height: 1.5;
+  }
+  h2 {
+    font-size: 0.9rem;
+    font-weight: 300;
+    mix-blend-mode: difference;
   }
 `;
 
@@ -135,7 +141,10 @@ const HeroSection = () => {
         <Header />
         <HeroTitle>Front-End<br />Developer</HeroTitle>
         <HeroList>
-          <h1>서비스의 가치를 올리는<br />프론트엔드 개발자 전예린입니다</h1>
+          <div>
+            <h1>서비스의 가치를 올리는<br />프론트엔드 개발자 전예린입니다,</h1>
+            <h2>팀과 혐력하며 함께 가치를 올리는 것을 좋아합니다.</h2>
+          </div>
           <Contacts>
             <div>
               <Emoji>✉️</Emoji> <span>diiidhe@gmail.com</span>
