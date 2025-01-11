@@ -9,7 +9,7 @@ import styled from 'styled-components';
 const HeaderContainer = styled.header`
   width: 100%;
   padding: 1rem 2rem;
-  mix-blend-mode: difference; /* 부모 배경과 반응 */
+  mix-blend-mode: difference;
   position: absolute;
   top: 0;
   z-index: 10;
@@ -93,10 +93,10 @@ const Header = () => {
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="#projects">Projects</NavLink>
+            <NavLink href="#about">About</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="#about">About</NavLink>
+            <NavLink href="#projects">Projects</NavLink>
           </NavItem>
           <NavItem>
             <NavLink href="#contact">Contact</NavLink>

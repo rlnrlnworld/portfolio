@@ -31,7 +31,7 @@ const HeroSectionContainer = styled.section`
   text-align: center;
   height: 100vh;
   position: relative;
-  mix-blend-mode: difference; /* 부모 배경과 반응 */
+  /* mix-blend-mode: difference; */
 `;
 
 const HeroTitle = styled.h1`
@@ -44,39 +44,45 @@ const HeroTitle = styled.h1`
   margin: 0;
   padding-top: 100px;
 `;
-
 const HeroList = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 80px;
   margin-top: 30px;
-  mix-blend-mode: difference;
+  color: white;
+
+  h1 {
+    font-size: 1rem;
+    font-weight: 400;
+    mix-blend-mode: difference;
+  }
 `;
 
-const Talk = styled.div`
+const Emoji = styled.span`
+  mix-blend-mode: normal !important;
+  isolation: isolate;
+`;
+
+const Contacts = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  color: white;
-  mix-blend-mode: difference;
+  align-items: flex-start;
+  gap: 10px;
+
+  span {
+    margin-left: 10px;
+    mix-blend-mode: difference;
+    text-decoration: none;
+    color: #d5d5d5;
+
+    &:hover {
+      color: white;
+    }
+  }
 `;
 
-const TalkTitle = styled.h3`
-  font-family: "Abril Fatface", serif;
-  font-weight: 400;
-`;
 
-const TalkEmail = styled.p`
-  font-size: 0.8rem;
-`;
-
-const HeroDescription = styled.p`
-  max-width: 400px;
-  text-align: center;
-  color: white;
-  mix-blend-mode: difference;
-`;
 
 const HeroSection = () => {
   const wrapperRef = useRef(null);
@@ -90,6 +96,7 @@ const HeroSection = () => {
       gsap.to(wrapperRef.current, {
         "--target": "0%",
         ease: "none",
+        overwrite: "auto",
         scrollTrigger: {
           trigger: wrapperRef.current,
           start: "top top",
@@ -98,10 +105,22 @@ const HeroSection = () => {
           pinSpacing: false,
           scrub: true,
           onLeave: () => {
-            gsap.to(wrapperRef.current, { opacity: 0, visibility: "hidden", duration: 0.5 });
+            gsap.to(wrapperRef.current, { 
+              opacity: 0, 
+              duration: 1.5, 
+              ease: "power2.out", 
+              onComplete: () => {
+                wrapperRef.current.style.display = "none";
+              }
+            });
           },
           onEnterBack: () => {
-            gsap.to(wrapperRef.current, { opacity: 1, visibility: "visible", duration: 0.5 });
+            wrapperRef.current.style.display = "block";
+            gsap.to(wrapperRef.current, { 
+              opacity: 1, 
+              duration: 1.5, 
+              ease: "power2.in" 
+            });
           },
         },
       });
@@ -116,15 +135,15 @@ const HeroSection = () => {
         <Header />
         <HeroTitle>Front-End<br />Developer</HeroTitle>
         <HeroList>
-          <Talk>
-            <TalkTitle>Let's Talk</TalkTitle>
-            <TalkEmail>diiidhe@gmail.com</TalkEmail>
-          </Talk>
-          <HeroDescription>
-            I'm a passionate front-end developer who loves building user
-            interfaces. I have a strong background in web development, and I'm
-            always eager to learn new skills.
-          </HeroDescription>
+          <h1>서비스의 가치를 올리는<br />프론트엔드 개발자 전예린입니다</h1>
+          <Contacts>
+            <div>
+              <Emoji>✉️</Emoji> <span>diiidhe@gmail.com</span>
+            </div>
+            <div>
+              <Emoji>☎️</Emoji> <span>+82 10-8550-6418</span>
+            </div>
+          </Contacts>
         </HeroList>
       </HeroSectionContainer>
     </HeroWrapper>

@@ -9,7 +9,7 @@ import projects from './ProjectsData';
 const ProjectContainer = styled.section`
   display: flex;
   margin-top: 0;
-  padding: 650px 0 100px;
+  padding: 100px 0 100px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -27,7 +27,6 @@ const ProjectContainer = styled.section`
 const ProjectTitle = styled.h2`
   @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
   font-family: 'Abril Fatface', serif;
-  background-color: white;
   font-weight: 400;
   font-size: 1.8rem;
 `;
